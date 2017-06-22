@@ -1,0 +1,14 @@
+html{
+	background-color: #b0bec5;
+	padding-top: 50px;
+}
+.iris {
+    background-image: url("background.png");
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
+.customtext{
+	color: #e3f2fd;
+	text-shadow: 1px 1px black;
+}

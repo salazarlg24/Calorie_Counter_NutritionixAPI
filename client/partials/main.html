@@ -1,0 +1,30 @@
+<div class=" container center iris z-depth-5">
+	<div ng-controller="MainController" style="padding: 15px">
+	
+	
+		<h3 class="light customtext" style="margin-top: 0px; color:#e3f2fd;">Calorie Calculator</h3>
+		<p style="color:#e3f2fd;" class="customtext">Enter the foods you have eaten today:</p>
+
+		<form>
+			<input type="text" ng-model="newFood.name" style="width: 50%;">
+			<div class="row">
+				<button ng-click="add()" class="waves-effect waves-light btn blue-grey ">Add</button>
+			</div>
+		</form>
+		
+		<h5 class="light" style="text-align: left; margin-bottom: 20px; color: #e3f2fd;text-shadow: 1px 1px black;">Your food log contains:</h5>
+
+		<table style="width: 75%; margin-left: 50px;">
+			<tr>
+				<th><h5 class="customtext">Food:</h5></th>
+				<th><h5 class="customtext">Calories:</h5></th>
+			</tr>
+			<tr ng-repeat="food in foodList">
+				<td><h5 class="light customtext">{{food.food_name}}</h5></td>
+				<td><h5 class="light customtext">{{food.nf_calories}} Calories</h5></td>
+			</tr>
+		</table>
+
+		<h5 class="light customtext" style="text-align: left; margin-top: 20px;">Total Calories: <span ng-if="totalCal != 0">{{totalCal}} Calories</span></h5>
+	</div>
+</div>
